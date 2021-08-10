@@ -260,6 +260,173 @@ def __uf_to_num(dataframe: pd.DataFrame) -> pd.DataFrame:
         ),
     )
 
+    dataframe["AEROPORTO DE ORIGEM (UF)"] = np.where(
+        dataframe["AEROPORTO DE ORIGEM (UF)"] == "SP",
+        28,
+        np.where(
+            dataframe["AEROPORTO DE ORIGEM (UF)"] == "BA",
+            27,
+            np.where(
+                dataframe["AEROPORTO DE ORIGEM (UF)"] == "RJ",
+                26,
+                np.where(
+                    dataframe["AEROPORTO DE ORIGEM (UF)"] == "MG",
+                    25,
+                    np.where(
+                        dataframe["AEROPORTO DE ORIGEM (UF)"] == "AM",
+                        24,
+                        np.where(
+                            dataframe["AEROPORTO DE ORIGEM (UF)"] == "PR",
+                            23,
+                            np.where(
+                                dataframe["AEROPORTO DE ORIGEM (UF)"] == "DF",
+                                22,
+                                np.where(
+                                    dataframe["AEROPORTO DE ORIGEM (UF)"] == "PE",
+                                    21,
+                                    np.where(
+                                        dataframe["AEROPORTO DE ORIGEM (UF)"] == "PA",
+                                        20,
+                                        np.where(
+                                            dataframe["AEROPORTO DE ORIGEM (UF)"]
+                                            == "RS",
+                                            19,
+                                            np.where(
+                                                dataframe["AEROPORTO DE ORIGEM (UF)"]
+                                                == "CE",
+                                                18,
+                                                np.where(
+                                                    dataframe[
+                                                        "AEROPORTO DE ORIGEM (UF)"
+                                                    ]
+                                                    == "SC",
+                                                    17,
+                                                    np.where(
+                                                        dataframe[
+                                                            "AEROPORTO DE ORIGEM (UF)"
+                                                        ]
+                                                        == "GO",
+                                                        16,
+                                                        np.where(
+                                                            dataframe[
+                                                                "AEROPORTO DE ORIGEM (UF)"
+                                                            ]
+                                                            == "MT",
+                                                            15,
+                                                            np.where(
+                                                                dataframe[
+                                                                    "AEROPORTO DE ORIGEM (UF)"
+                                                                ]
+                                                                == "AL",
+                                                                14,
+                                                                np.where(
+                                                                    dataframe[
+                                                                        "AEROPORTO DE ORIGEM (UF)"
+                                                                    ]
+                                                                    == "RN",
+                                                                    13,
+                                                                    np.where(
+                                                                        dataframe[
+                                                                            "AEROPORTO DE ORIGEM (UF)"
+                                                                        ]
+                                                                        == "ES",
+                                                                        12,
+                                                                        np.where(
+                                                                            dataframe[
+                                                                                "AEROPORTO DE ORIGEM (UF)"
+                                                                            ]
+                                                                            == "MS",
+                                                                            11,
+                                                                            np.where(
+                                                                                dataframe[
+                                                                                    "AEROPORTO DE ORIGEM (UF)"
+                                                                                ]
+                                                                                == "MA",
+                                                                                10,
+                                                                                np.where(
+                                                                                    dataframe[
+                                                                                        "AEROPORTO DE ORIGEM (UF)"
+                                                                                    ]
+                                                                                    == "RO",
+                                                                                    9,
+                                                                                    np.where(
+                                                                                        dataframe[
+                                                                                            "AEROPORTO DE ORIGEM (UF)"
+                                                                                        ]
+                                                                                        == "PI",
+                                                                                        8,
+                                                                                        np.where(
+                                                                                            dataframe[
+                                                                                                "AEROPORTO DE ORIGEM (UF)"
+                                                                                            ]
+                                                                                            == "SE",
+                                                                                            7,
+                                                                                            np.where(
+                                                                                                dataframe[
+                                                                                                    "AEROPORTO DE ORIGEM (UF)"
+                                                                                                ]
+                                                                                                == "PB",
+                                                                                                6,
+                                                                                                np.where(
+                                                                                                    dataframe[
+                                                                                                        "AEROPORTO DE ORIGEM (UF)"
+                                                                                                    ]
+                                                                                                    == "TO",
+                                                                                                    5,
+                                                                                                    np.where(
+                                                                                                        dataframe[
+                                                                                                            "AEROPORTO DE ORIGEM (UF)"
+                                                                                                        ]
+                                                                                                        == "AP",
+                                                                                                        4,
+                                                                                                        np.where(
+                                                                                                            dataframe[
+                                                                                                                "AEROPORTO DE ORIGEM (UF)"
+                                                                                                            ]
+                                                                                                            == "RO",
+                                                                                                            3,
+                                                                                                            np.where(
+                                                                                                                dataframe[
+                                                                                                                    "AEROPORTO DE ORIGEM (UF)"
+                                                                                                                ]
+                                                                                                                == "RR",
+                                                                                                                2,
+                                                                                                                np.where(
+                                                                                                                    dataframe[
+                                                                                                                        "AEROPORTO DE ORIGEM (UF)"
+                                                                                                                    ]
+                                                                                                                    == "AC",
+                                                                                                                    1,
+                                                                                                                    0,
+                                                                                                                ),
+                                                                                                            ),
+                                                                                                        ),
+                                                                                                    ),
+                                                                                                ),
+                                                                                            ),
+                                                                                        ),
+                                                                                    ),
+                                                                                ),
+                                                                            ),
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    )
+
     return dataframe
 
 
