@@ -56,7 +56,7 @@ print("Decision Tree")
 
 arvore = tree.DecisionTreeClassifier()
 arvore.fit(treino_x, treino_y)
-y_result = nkk.predict(teste_x)
+y_result = arvore.predict(teste_x)
 
 print(confusion_matrix(teste_y, y_result))
 print()
