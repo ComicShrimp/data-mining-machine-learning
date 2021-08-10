@@ -93,6 +93,14 @@ def __regiao_to_num(dataframe: pd.DataFrame) -> pd.DataFrame:
     return dataframe
 
 
+def __grupo_de_voo_to_num(dataframe: pd.DataFrame) -> pd.DataFrame:
+    dataframe["GRUPO DE VOO"] = np.where(
+        dataframe["GRUPO DE VOO"] == "NAO REGULAR", 1, 0
+    )
+
+    return dataframe
+
+
 def data_pre_processing(file_path: str) -> pd.DataFrame:
 
     raw_data = pd.read_csv(file_path, sep=";")
@@ -102,5 +110,6 @@ def data_pre_processing(file_path: str) -> pd.DataFrame:
     filtered_data = __delete_nan(filtered_data)
     filtered_data = __name_empresa_to_num(filtered_data)
     filtered_data = __regiao_to_num(filtered_data)
+    filtered_data = __grupo_de_voo_to_num(filtered_data)
 
     return filtered_data
