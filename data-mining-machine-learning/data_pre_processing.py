@@ -14,18 +14,8 @@ def __filter_columns(dataframe: pd.DataFrame) -> pd.DataFrame:
             "AEROPORTO DE DESTINO (REGIAO)",
             "NATUREZA",  # Voo domestico
             "GRUPO DE VOO",  # Target
-            "PASSAGEIROS PAGOS",
-            "PASSAGEIROS GRATIS",
-            "CARGA PAGA (KG)",
-            "CARGA GRATIS (KG)",
-            "CORREIO (KG)",
-            "COMBUSTIVEL (LITROS)",
             "DISTANCIA VOADA (KM)",
-            "DECOLAGENS",
-            "ASSENTOS",
-            "PAYLOAD",
             "HORAS VOADAS",
-            "BAGAGEM (KG)",
         ]
     ]
 
