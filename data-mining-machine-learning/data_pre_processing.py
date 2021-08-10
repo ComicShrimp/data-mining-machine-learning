@@ -1,3 +1,4 @@
+from typing import Tuple
 import pandas as pd
 import numpy as np
 from pandas.core.frame import DataFrame
@@ -448,3 +449,21 @@ def data_pre_processing(file_path: str) -> pd.DataFrame:
     __remove_tipo_voo(filtered_data)
 
     return filtered_data
+
+
+def divide_dataframe(dataframe: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    return (
+        dataframe[
+            [
+                "EMPRESA (NOME)",
+                "MES",
+                "AEROPORTO DE ORIGEM (UF)",
+                "AEROPORTO DE ORIGEM (REGIAO)",
+                "AEROPORTO DE DESTINO (UF)",
+                "AEROPORTO DE DESTINO (REGIAO)",
+                "DISTANCIA VOADA (KM)",
+                "HORAS VOADAS",
+            ]
+        ],
+        dataframe["GRUPO DE VOO"],
+    )
