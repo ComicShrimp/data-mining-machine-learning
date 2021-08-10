@@ -43,7 +43,7 @@ print("KNN")
 
 nkk = NearestNeighbors(n_neighbors=3)
 nkk.fit(treino_x, treino_y)
-y_result = nkk.predict(teste_x)
+y_result = nkk.kneighbors(teste_x)
 
 
 print(confusion_matrix(teste_y, y_result))
